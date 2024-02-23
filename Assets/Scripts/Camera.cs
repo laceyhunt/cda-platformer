@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class Script : MonoBehaviour
 {
-
     public Transform player;
-    // Update is called once per frame
+
+    // Have the camera follow the player but also respect the borders of the game.
     void Update()
     {
-        if(player.transform.position.x > 0)
+        if (player.transform.position.x > 0)
         {
-            transform.position = new Vector3(player.transform.position.x, 0, 0) + new Vector3(0,0, -10);
+            transform.position = new Vector3(player.transform.position.x, 0, 0) + new Vector3(0, 0, -10);
         }
     }
 }
